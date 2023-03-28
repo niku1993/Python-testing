@@ -1,5 +1,4 @@
 class reverse:
-
    def rev (self, a) :
        b=-1
        rev=""
@@ -7,6 +6,5 @@ class reverse:
            rev+=a[b]
            b=b-1
        return rev
-
 a=reverse()
 print (a.rev('My name is Nitish'))
