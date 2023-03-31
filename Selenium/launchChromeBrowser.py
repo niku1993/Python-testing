@@ -14,8 +14,8 @@ driver.get("https://rahulshettyacademy.com/")
 print(driver.title)
 print(driver.current_url)
 
-# driver.get("https://rahulshettyacademy.com/practice-project")
-# driver.minimize_window()
+driver.get("https://rahulshettyacademy.com/practice-project")
+driver.minimize_window()
 driver.back()
 
 driver.refresh()

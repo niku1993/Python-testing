@@ -1,7 +1,5 @@
 # C:\Users\Priya Khiwal\Firefox (gecko) Webdriver\geckodriver-v0.32.2-win-aarch64.zip
 
-#FireFox
-
 from selenium import webdriver
 from selenium.webdriver.firefox.service import Service
 # from selenium.webdriver.chrome.options import Options
