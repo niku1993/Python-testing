@@ -6,7 +6,8 @@ from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions
 from selenium.webdriver.support.wait import WebDriverWait
-
+expected_result = ['Cucumber - 1 Kg', 'Raspberry - 1/4 Kg', 'Strawberry - 1/4 Kg']
+actual_result = []
 a=Options()
 a.add_experimental_option("detach",True)
 
@@ -22,7 +23,10 @@ count = len(results)
 assert count > 0
 
 for result in results:
+    actual_result.append(result.find_element(By.XPATH, "h4").text)
     result.find_element(By.XPATH,"div/button").click()
+# print(actual_result)
+assert expected_result == actual_result
 
 driver.find_element(By.CSS_SELECTOR,"img[alt='Cart']").click()
 driver.find_element(By.XPATH,"//button[text()='PROCEED TO CHECKOUT']").click()
@@ -41,6 +45,10 @@ for price in prices:
 
 print(sum)
 
-totalAmount = int(driver.find_element(By.CSS_SELECTOR,".totAmt").text)
+totalAmount = float(driver.find_element(By.CSS_SELECTOR,".totAmt").text)
 
 assert sum == totalAmount
+
+discountedAmount = float(driver.find_element(By.CSS_SELECTOR,".discountAmt").text)
+
+assert discountedAmount < totalAmount
