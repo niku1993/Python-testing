@@ -1,0 +1,11 @@
+2023-04-16 10:49:39,632 :INFO : test_editProfile :Rahul
+2023-04-16 10:49:39,632 :INFO : test_editProfile :rahulshettyacademy.com
+2023-04-16 10:49:52,061 :INFO : test_editProfile :Rahul
+2023-04-16 10:49:52,061 :INFO : test_editProfile :rahulshettyacademy.com
+2023-04-16 10:49:52,078 :CRITICAL : pytestsDemo.test_logging :Critical issue
+2023-04-16 10:52:10,792 :INFO : test_editProfile :Rahul
+2023-04-16 10:52:10,792 :INFO : test_editProfile :rahulshettyacademy.com
+2023-04-16 10:52:10,809 :CRITICAL : pytestsDemo.test_logging :Critical issue
+2023-04-16 10:57:53,761 :INFO : test_editProfile :Rahul
+2023-04-16 10:57:53,761 :INFO : test_editProfile :rahulshettyacademy.com
+2023-04-16 10:57:53,768 :CRITICAL : pytestsDemo.test_logging :Critical issue
