@@ -1,0 +1,19 @@
+Invalid port. Exiting...
+1681657208258	geckodriver	INFO	Listening on 127.0.0.1:61680
+1681657353722	geckodriver	INFO	Listening on 127.0.0.1:61726
+1681657433263	geckodriver	INFO	Listening on 127.0.0.1:61752
+1681657436323	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-no-remote" "-profile" "C:\\Users\\PRIYAK~1\\AppData\\Local\\Temp\\rust_mozprofileihXsCs"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1681657436733	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1681657436738	Marionette	INFO	Listening on port 61762
+Read port: 61762
+1681657437083	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\PRIYAK~1\\AppData\\Local\\Temp\\rust_mozprofileihXsCs\\search.json.mozlz4", (void 0)))
+[ERROR glean_core] Error setting metrics feature config: Json(Error("EOF while parsing a value", line: 1, column: 0))
+JavaScript error: resource://gre/modules/XULStore.jsm, line 58: Error: Can't find profile directory.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 58: Error: Can't find profile directory.
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://rahulshettyacademy.com."
+1681657446580	Marionette	INFO	Stopped listening on port 61762
+Dynamically enable window occlusion 1
