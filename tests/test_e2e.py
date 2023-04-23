@@ -16,10 +16,13 @@ class TestOne(BaseClass):
 
     def test_e2e(self):
 
-        homePage = HomePage(self.driver)
-        homePage.shopItems().click()
+        log = self.getLogger()
 
-        checkoutPage = CheckoutPage(self.driver)
+        homePage = HomePage(self.driver)
+        checkoutPage = homePage.shopItems()
+
+        log.info("getting all the card titles")
+
         cards = checkoutPage.getCardTitles()
 
         confirmPage = ConfirmPage(self.driver)
@@ -28,19 +31,20 @@ class TestOne(BaseClass):
         for card in cards:
             i = i + 1
             cardText = card.text
-            print(cardText)
+            log.info(cardText)
             if cardText == "Blackberry":
                 checkoutPage.getCardFooter()[i].click()
 
         checkoutPage.getClick().click()
-        time.sleep(5)
-        checkoutPage.checkOutItems().click()
+        confirmPage = checkoutPage.checkOutItems()
+        log.info("Entering country name as India")
 
         confirmPage.getCountry().send_keys("ind")
-        element = WebDriverWait(self.driver, 10).until(EC.presence_of_element_located((By.LINK_TEXT, "India")))
+        self.verifyLinkPresence("India")
         confirmPage.clickCountry().click()
         confirmPage.agreement().click()
         confirmPage.clickPurchase().click()
         textMatch = confirmPage.getSuccess().text
+        log.info("Text received from application is" + textMatch)
 
         assert ('Success! Thank you!' in textMatch)
